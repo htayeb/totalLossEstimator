@@ -26,6 +26,16 @@ body {
   margin-bottom: 5px;
   margin-right: 10px;
   width: 150px;
+  height: 70px;
+  text-align: center;
+  justify-content: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /*line-height: 3.4em;*/
+}
+.container {
+
 }
 
 .btn-outline-primary {
