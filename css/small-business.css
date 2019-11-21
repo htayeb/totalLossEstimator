@@ -6,3 +6,6 @@
 body {
   padding-top: 56px;
 }
+.bg-dark {
+  background: linear-gradient(90deg, #009de0, #65b5ff);
+}
