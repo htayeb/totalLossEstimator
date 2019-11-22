@@ -1,4 +1,4 @@
-function bumperApi(picLocation) {
+
     var VisualRecognitionV3 = require('watson-developer-cloud/visual-recognition/v3');
     var fs = require('fs');
 
@@ -7,7 +7,7 @@ function bumperApi(picLocation) {
         iam_apikey: 'PdcxyxoIts_ILIcZlgkJXS2GANCihnu5KtlMldowJ4uR'
     });
 
-    var images_file= fs.createReadStream(picLocation);
+    var images_file = fs.createReadStream('./test.jpg');
     var classifier_ids = ["Bumpers_1100182070"];
     var threshold = 0.6;
 
@@ -17,11 +17,10 @@ function bumperApi(picLocation) {
         threshold: threshold
     };
 
-    visualRecognition.classify(params, function(err, response) {
+    visualRecognition.classify(params, function (err, response) {
         if (err) {
             console.log(err);
         } else {
             console.log(JSON.stringify(response, null, 2))
         }
     });
-}
